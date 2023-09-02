@@ -1,0 +1,75 @@
+.potentiometer {
+  /* flex: 0 1 33%; */
+  flex-shrink: 1;
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--shadow-lg);
+  border-radius: 100vw;
+  position: relative;
+  background: var(--gradient-ink-radial);
+}
+
+.label {
+  position: absolute;
+  color: white;
+  bottom: 0%;
+  left: 50%;
+  translate: -50% 0%;
+  opacity: 0.2;
+}
+
+input[type=range].knobInput {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100vw;
+  background: none;
+  cursor: grab;
+}
+
+input[type=range].knobInput::before {
+  content: "";
+  width: 2px;
+  height: 50%;
+  background: var(--color-reverse);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0%;
+  pointer-events: none;
+}
+
+input[type=range].knobInput::-webkit-slider-runnable-track,
+input[type=range].knobInput::-moz-range-track {
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+
+input[type=range].knobInput:focus::-moz-range-track {
+  background: transparent;
+}
+
+input[type=range].knobInput::-webkit-slider-thumb,
+input[type=range].knobInput::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: none;
+}
+
+input[type=range].knobInput:focus {
+  outline: none;
+}
+
+input[type=range].knobInput:focus::-webkit-slider-runnable-track {
+  outline: 1px solid blue;
+}
+
+input[type=range].knobInput:-moz-focusring{
+  outline: 1px solid blue;
+  outline-offset: -1px;
+}
+

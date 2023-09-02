@@ -1,0 +1,74 @@
+.stompSwitch {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.led {
+  flex: 0 0 20%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100vh;
+  height: 3vh;
+  background: radial-gradient(50% 50.00% at 50% 50.00%, #B55151 0%, #A92B2B 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.led.on {
+  background: radial-gradient(50% 50.00% at 50% 50.00%, #D4D9A3 12.50%, #F00 24.48%, #FF9494 100%);
+  box-shadow: 0px 0px 20px 0px #F00;
+}
+
+.switch {
+  aspect-ratio: 1 / 1;
+  flex: 0 1 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch > svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  translate: 0% -50%;
+  z-index: 1;
+}
+
+.button.active  {
+  animation: stomp 0.3s ease-out;
+}
+
+.button {
+  aspect-ratio: 1 / 1;
+  background: var(--gradient-light-radial);
+  box-shadow: var(--shadow-lg);
+  border-radius: 100vh;
+  flex-basis: 60%;
+  z-index: 2;
+}
+
+@keyframes stomp {
+  0% {
+    scale: 1.0;
+  }
+  20% {
+    scale: 0.9;
+  }
+  100% {
+    scale: 1.0;
+  }
+}
+
+.stompSwitch > svg {
+  /* width: 100%; */
+  /* height: 10vh; */
+  height: 100%;
+}
+
+.stompSwitch > path {
+  fill: var(--color-neutral);
+}

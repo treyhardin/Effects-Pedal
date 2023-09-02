@@ -1,0 +1,8 @@
+.button {
+  aspect-ratio: 1 / 1;
+  width: 3vh;
+  min-width: 30px;
+  border-radius: 100vw;
+  background: var(--gradient-primary-linear);
+  box-shadow: var(--shadow-sm);
+}
