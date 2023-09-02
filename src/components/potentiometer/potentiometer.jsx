@@ -2,7 +2,7 @@ import { createSignal, onMount } from 'solid-js'
 import styles from './potentiometer.module.css'
 // import '../helpers/input-knobs'
 
-export default function Potentiometer({min, max, state, setState}) {
+export default function Potentiometer({min, max, state, setState, label}) {
 
   let inputRef
 
@@ -91,6 +91,7 @@ export default function Potentiometer({min, max, state, setState}) {
   
   return (
     <div class={styles.potentiometer}>
+      <p class={styles.label}>{label()}</p>
       <input 
           class={`${styles.knobInput}`}
           ref={inputRef}
@@ -99,7 +100,7 @@ export default function Potentiometer({min, max, state, setState}) {
           max={max}
           value={state()}
         />
-        <p class={styles.label}>{Math.floor(state())}</p>
+        <p class={styles.value}>{Math.floor(state())}</p>
     </div>
   )
 }

@@ -11,18 +11,21 @@ export default function Potentiometers() {
   return (
     <div class={styles.potentiometerWrapper}>
       <Potentiometer 
+        label="Mix"
         min={0}
         max={100}
         state={pot1}
         setState={setPot1}
       />
       <Potentiometer 
+        label="Reverb"
         min={0}
         max={200}
         state={pot2}
         setState={setPot2}
       />
       <Potentiometer 
+        label="Distortion"
         min={-50}
         max={100}
         state={pot3}
